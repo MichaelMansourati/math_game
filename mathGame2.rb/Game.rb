@@ -6,8 +6,8 @@ require './Turn.rb'
 class Game
 
   def initialize
-    @player1 = Player.new('player1')
-    @player2 = Player.new('player2')
+    @player1 = Player.new('player 1')
+    @player2 = Player.new('player 2')
     @players_array = []
     @players_array << @player1
     @players_array << @player2
@@ -19,7 +19,7 @@ class Game
       q = Question.new
       q.ask(current_player)
     end
-    puts "game over!"
+    puts "game over! #{current_player} loses!"
   end
 
 

@@ -8,13 +8,14 @@ class Question
   end
 
   def ask(player)
-    puts "#{player.name}, what is #{@num1} + #{@num2}?"
+    puts "---NEW QUESTION---"
+    puts "#{player.name}: what is #{@num1} + #{@num2}?"
     @answer = gets.chomp.to_i
     if (@answer == @num1 + @num2)
       puts "correct!"
     else
-      puts "incorrect!"
       player.decrement_lives
+      puts "incorrect! #{player.name} has #{player.lives} lives left."
     end
   end
 end
