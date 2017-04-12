@@ -1,1 +1,4 @@
-Turn.rb
+class turn
+
+
+  def initialize(players)
