@@ -1,23 +1,15 @@
 class Player
 
-  attr_accessor :lives
+  attr_accessor :lives, :decrement_lives
+  attr_reader :name
 
-  def lives
-    @lives
+  def initialize(name)
+    @name = name
+    @lives = 3
   end
 
   def decrement_lives
     @lives -= 1
-    if @lives == 0
-      puts "#{player} has been eliminated"
-      # Game should no longer recognize this player as part of the game
-    else
-      puts "#{player} has #{player.lives} lives remaining"
-    end
-  end
-
-  def initialize
-    @lives = 3
   end
 
 end
